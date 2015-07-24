@@ -1,0 +1,11 @@
+﻿<Window x:Class="TFSAPI_DeleteWorkItemDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="150" Width="257">
+    <Grid>
+        <Button Content="Select Server" Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="btn_server" VerticalAlignment="Top" Width="89" Click="btn_server_Click" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="12,73,0,0" Name="txt_id" VerticalAlignment="Top" Width="127" />
+        <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="142,73,0,0" Name="btn_delete" VerticalAlignment="Top" Width="75" Click="btn_delete_Click" IsEnabled="False" />
+        <Label Content="Enter Work Item Number:" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="label1" VerticalAlignment="Top" />
+    </Grid>
+</Window>

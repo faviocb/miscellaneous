@@ -46,7 +46,7 @@ used by your application.
 Aborted
 ```
 
-Create the 
+Create a wrapper
 
 ```
 gcc -Wall -fPIC -c libdl-debian-32-bit.c 
@@ -57,15 +57,11 @@ sudo cp libdl-debian-32-bit.so /lib
 The following C# program works:
 
 ```
-$ sudo mcs use-libdl.cs
-$ sudo mono use-libdl.exe
+$ sudo mcs use-libdl-debian-32-bit.cs
+$ sudo mono use-libdl-debian-32-bit.exe
 ```
 
 
-I said "it worked" because it didn't crash when opening libuv.
-I guess I have to find out how to test it  in Microsoft.AspNet.Server.Kestrel/Networking/PlatformApis.cs
-
-Any help will be appreciated. I am a newbie and I have been enjoying Debian. 
 
 ## Source
 

@@ -1,0 +1,77 @@
+<html>
+  
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+
+
+  <script src="bower_components/opal/opal/current/opal.min.js"></script>
+  <script src="bower_components/asciidoctor.js/dist/asciidoctor-core.min.js"></script>
+  <script src="bower_components/asciidoctor.js/dist/asciidoctor-docbook.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+
+<script>
+
+
+
+
+$(document).ready(function(){
+
+
+
+
+$("#btnBuild").click(function(){
+
+var content = $("#txtAsciidoc").val();
+
+var options = Opal.hash2(
+
+    ['doctype', 'attributes'],
+    {doctype: 'book', attributes: ['showtitle']}
+
+);
+var html = Opal.Asciidoctor.$convert(content, options); (1)
+
+//$("#divResult").innerHTML(html);
+document.getElementById('divResult').innerHTML = html;
+
+});
+
+
+
+
+})
+
+
+
+</script>
+</head>
+
+<body>
+
+<textarea id="txtAsciidoc" cols = 200 rows=20>
+= Hello, AsciiDoc!
+Doc Writer <doc@example.com>
+
+An introduction to http://asciidoc.org[AsciiDoc].
+
+== First Section
+
+* item 1
+* item 2
+
+[source,ruby]
+puts "Hello, World!"
+    </textarea>
+
+<button type="button" id="btnBuild">Build!</button>
+
+<div id="divResult">
+  </div>
+
+
+
+</body>
+
+</html>
